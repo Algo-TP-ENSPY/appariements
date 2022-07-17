@@ -19,7 +19,7 @@ public class ProcessOptimizer  extends RecursiveTask<ArrayList<Word[]>> {
     protected ArrayList<Word[]> compute() {
         Match match = new Match();
         if (computational_data.length <= threshold) {
-            System.out.println("Starting a new compute for data of length: "+computational_data.length);
+//            System.out.println("Starting a new compute for data of length: "+computational_data.length);
             switch (algorithm) {
                 case O_N:
                     return match.calculateOn(computational_data, reference_data);
@@ -31,7 +31,7 @@ public class ProcessOptimizer  extends RecursiveTask<ArrayList<Word[]>> {
                     return match.calculateOnlog(comp, ref);
             }
         }
-        System.out.println(computational_data.length+" is greater than threshold value ("+threshold+"). Dividing...");
+//        System.out.println(computational_data.length+" is greater than threshold value ("+threshold+"). Dividing...");
         // take the first one,
         ProcessOptimizer p1  = new ProcessOptimizer(algorithm,reference_data,
                 Arrays.copyOfRange(computational_data,0,threshold),threshold);

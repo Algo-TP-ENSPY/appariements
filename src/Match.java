@@ -18,7 +18,7 @@ public class Match implements MatchInterface {
         }
         long difference = System.currentTimeMillis() - start_time;
 
-        System.out.println("Computed "+reference.length+" words to get "+list.size()+" matches in "+difference+" milliseconds!");
+//        System.out.println("Computed "+reference.length+" words to get "+list.size()+" matches in "+difference+" milliseconds!");
         return list;
     }
 
@@ -49,7 +49,7 @@ public class Match implements MatchInterface {
         }
         long difference = System.currentTimeMillis() - start_time;
 
-        System.out.println("Computed "+reference.length+" words to get "+arrayList.size()+" matches in "+difference+" milliseconds!");
+//        System.out.println("Computed "+reference.length+" words to get "+arrayList.size()+" matches in "+difference+" milliseconds!");
 
         return  arrayList;
     }
@@ -63,9 +63,7 @@ public class Match implements MatchInterface {
             result.putAll(word.binaryMatch(wordSorted.toArray(new Word[0])));
         }
         long difference = System.currentTimeMillis() - start_time;
-        System.out.println("Computed "+reference.size()+" in "+difference+" milliseconds!");
-
-
+//        System.out.println("Computed "+reference.size()+" in "+difference+" milliseconds!");
         // OUTSIDE
         // send it to
         Set<String> rs = result.keySet();
